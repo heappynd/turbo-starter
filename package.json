@@ -3,13 +3,16 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "lint": "turbo lint"
+    "lint": "oxlint . --fix",
+    "format": "oxfmt ."
   },
   "devDependencies": {
+    "oxfmt": "^0.54.0",
+    "oxlint": "~1.69.0",
     "turbo": "^2.5.0"
   },
-  "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=22.18.0"
-  }
+  },
+  "packageManager": "pnpm@11.9.0"
 }
