@@ -1,9 +1,15 @@
-<script setup lang="ts">
-import { RouterView } from "vue-router";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <RouterView />
+  <a-config-provider
+    :theme="{
+      token: {},
+    }"
+  >
+    <a-app>
+      <router-view />
+    </a-app>
+  </a-config-provider>
 </template>
 
 <style scoped></style>

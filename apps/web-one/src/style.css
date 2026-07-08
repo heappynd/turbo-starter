@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* 二选一 —— 经典入口 */
+/* @import "@antdv-next/tailwind/theme.css"; */
+
+/* 或者 —— 命名空间安全入口（推荐） */
+@import "@antdv-next/tailwind/compat.css";
