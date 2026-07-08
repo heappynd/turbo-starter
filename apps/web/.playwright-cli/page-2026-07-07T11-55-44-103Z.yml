@@ -1,0 +1,36 @@
+- generic [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "登录" [level=3] [ref=e6]
+      - paragraph [ref=e7]: 欢迎回来，请登录你的账号
+    - generic [ref=e10]:
+      - group [ref=e11]:
+        - generic [ref=e12]: 邮箱
+        - group [ref=e13]:
+          - group [ref=e14]:
+            - img [ref=e15]
+          - textbox "邮箱" [invalid] [ref=e18]:
+            - /placeholder: name@example.com
+            - text: test@test
+        - alert [ref=e46]: 请输入有效的邮箱地址
+      - group [ref=e19]:
+        - generic [ref=e20]: 密码
+        - group [ref=e21]:
+          - group [ref=e22]:
+            - img [ref=e23]
+          - textbox "密码" [ref=e27]:
+            - /placeholder: 请输入密码
+            - text: password123
+          - group [ref=e28]:
+            - button [ref=e29]:
+              - img
+      - button "登录" [active] [ref=e30]
+    - paragraph [ref=e32]:
+      - text: 还没有账号？
+      - link "立即注册" [ref=e33] [cursor=pointer]:
+        - /url: /register
+  - generic [ref=e34]:
+    - generic "Toggle devtools panel" [ref=e35] [cursor=pointer]:
+      - img [ref=e36]
+    - generic "Toggle Component Inspector" [ref=e41] [cursor=pointer]:
+      - img [ref=e42]

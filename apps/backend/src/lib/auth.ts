@@ -3,7 +3,9 @@ import Database from "better-sqlite3";
 
 export const auth = betterAuth({
   database: new Database("./sqlite.db"),
-  trustedOrigins: ["http://localhost:5174"],
+  trustedOrigins: process.env.TRUSTED_ORIGINS
+    ? process.env.TRUSTED_ORIGINS.split(",")
+    : ["http://localhost:5173", "http://localhost:5174"],
   emailAndPassword: {
     enabled: true,
   },
