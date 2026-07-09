@@ -59,11 +59,7 @@ watch(
 async function handleFinish(values: any) {
   loading.value = true;
   try {
-    const result = await authStore.register(
-      values.name,
-      values.email,
-      values.password,
-    );
+    const result = await authStore.register(values.name, values.email, values.password);
     if (result.success) {
       message.success("注册成功");
       // Better Auth auto-signs in after sign up
@@ -92,28 +88,15 @@ async function handleFinish(values: any) {
       @finish="handleFinish"
     >
       <a-form-item name="name" :rules="nameRules">
-        <a-input
-          v-model:value="model.name"
-          placeholder="昵称"
-          size="large"
-        />
+        <a-input v-model:value="model.name" placeholder="昵称" size="large" />
       </a-form-item>
 
       <a-form-item name="email" :rules="emailRules">
-        <a-input
-          v-model:value="model.email"
-          placeholder="邮箱"
-          type="email"
-          size="large"
-        />
+        <a-input v-model:value="model.email" placeholder="邮箱" size="large" />
       </a-form-item>
 
       <a-form-item name="password" :rules="passwordRules" has-feedback>
-        <a-input-password
-          v-model:value="model.password"
-          placeholder="密码"
-          size="large"
-        />
+        <a-input-password v-model:value="model.password" placeholder="密码" size="large" />
       </a-form-item>
 
       <a-form-item name="confirmPassword" :rules="confirmPasswordRules" has-feedback>
@@ -125,13 +108,7 @@ async function handleFinish(values: any) {
       </a-form-item>
 
       <a-form-item>
-        <a-button
-          block
-          type="primary"
-          html-type="submit"
-          size="large"
-          :loading="loading"
-        >
+        <a-button block type="primary" html-type="submit" size="large" :loading="loading">
           注 册
         </a-button>
       </a-form-item>
@@ -140,9 +117,7 @@ async function handleFinish(values: any) {
     <template #footer>
       <a-typography-text type="secondary">
         已有账号？
-        <router-link to="/login" class="text-ant-primary font-medium">
-          立即登录
-        </router-link>
+        <router-link to="/login" class="text-ant-primary font-medium"> 立即登录 </router-link>
       </a-typography-text>
     </template>
   </AuthLayout>
